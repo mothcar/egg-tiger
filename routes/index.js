@@ -10,4 +10,8 @@ router.use("/users", userRoutes);
 const postRoutes = require("./postRoutes");
 router.use("/posts", postRoutes);
 
+//test
+const postRoutes = require("./testRoutes");
+router.use("/tests", testRoutes);
+
 module.exports = router;
