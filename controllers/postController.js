@@ -15,7 +15,13 @@ const createPost = async (req, res, next) => {
   try {
     const { title, content } = req.body;
     // 게시물 생성 로직
-    const post = { id: 2, title, content, userId: req.user.id };
+    // const post = { id: 2, title, content, userId: req.user.id };
+    let params = {
+      title: title,
+      content: content,
+      // image: req.file.location
+    }
+    const post = await Post.create(params);
     res.status(201).json(post);
   } catch (error) {
     next(error);
