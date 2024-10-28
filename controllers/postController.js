@@ -4,7 +4,7 @@ const getPosts = async (req, res, next) => {
   try {
     // const posts = [{ id: 1, title: '첫 번째 게시물' }]; // 예시 데이터
     const posts = await Post.find();
-    console.log('Post request............. : ', posts)
+    // console.log('Post request............. : ', posts)
     res.json(posts);
   } catch (error) {
     next(error);
@@ -13,7 +13,12 @@ const getPosts = async (req, res, next) => {
 
 const createPost = async (req, res, next) => {
   try {
+    console.log('req.body : ', req.body)
     const { title, content } = req.body;
+    
+    console.log('title : ', title)
+    console.log('contnet : ', content)
+    
     // 게시물 생성 로직
     // const post = { id: 2, title, content, userId: req.user.id };
     let params = {
