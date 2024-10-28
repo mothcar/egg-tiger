@@ -4,6 +4,7 @@ const cors = require("cors");
 const morgan = require("morgan");
 const helmet = require("helmet");
 require("dotenv").config();
+require('./db');
 
 const errorHandler = require("./middleware/errorHandler");
 const notFound = require("./middleware/notFound");
