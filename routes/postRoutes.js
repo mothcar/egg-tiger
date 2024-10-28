@@ -9,7 +9,8 @@ const {
 } = require("../controllers/postController");
 
 router.get("/", getPosts);
-router.post("/", auth, createPost);
+// router.post("/", auth, createPost);
+router.post("/", createPost);
 router.put("/:id", auth, updatePost);
 router.delete("/:id", auth, deletePost);
 
