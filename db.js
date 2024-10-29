@@ -8,6 +8,7 @@ const MONGO_URI = 'mongodb+srv://dragonleeuman:1748asdf@cluster0.2iz7jx7.mongodb
 mongoose.connect(MONGO_URI)
   .then(() => {
     console.log('Connected to MongoDB');
+    console.log('Server is Running');
   })
   .catch((error) => {
     console.error('Error connecting to MongoDB:', error);

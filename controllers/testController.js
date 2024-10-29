@@ -1,7 +1,7 @@
 const getTests = async (req, res, next) => {
   try {
     // 게시물 목록 조회 로직
-    console.log('Post request.............')
+    // console.log('Post request.............')
     const posts = [{ id: 1, title: '첫 번째 test' }]; // 예시 데이터
     res.json(posts);
   } catch (error) {
